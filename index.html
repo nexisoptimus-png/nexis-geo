@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f8a5f">
+  <title>Nexis Geo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nexis Geo</h1>
+    <p>දැරණියගල - ටැක්සි • ත්‍රීවීල් හයර් • කූරියර්</p>
+  </header>
+
+  <main>
+    <!-- දැනට පවතින ඕඩර් එකේ තත්ත්වය -->
+    <section id="activeCard" class="card hidden">
+      <h2>ඔබේ ඕඩර් එක</h2>
+      <div class="order">
+        <div class="row"><span class="tag">අංකය:</span> <b id="aId"></b></div>
+        <div class="row"><span class="tag">තත්ත්වය:</span> <span id="aStatus" class="status-badge"></span></div>
+        <div class="row hidden" id="aDriverRow"><span class="tag">රියදුරු:</span> <b id="aDriver"></b></div>
+      </div>
+      <a id="aCall" class="btn hidden" href="#">📞 රියදුරාට කතා කරන්න</a>
+      <button id="aCancel" class="btn danger hidden" type="button">ඕඩර් එක අවලංගු කරන්න</button>
+      <button id="aNew" class="btn secondary hidden" type="button">අලුත් ඕඩර් එකක් දාන්න</button>
+      <div id="aMsg" class="msg err hidden"></div>
+    </section>
+
+    <!-- ඕඩර් ෆෝම් එක -->
+    <section id="formCard" class="card">
+      <h2>1. සේවාව තෝරන්න</h2>
+      <div class="services" id="services"></div>
+      <div class="price-note" id="priceNote"></div>
+
+      <form id="orderForm" novalidate>
+        <label for="name">ඔබේ නම</label>
+        <input id="name" autocomplete="name" maxlength="60">
+
+        <label for="phone">දුරකථන අංකය</label>
+        <input id="phone" type="tel" inputmode="numeric" placeholder="0771234567" maxlength="10" autocomplete="tel">
+
+        <label for="pickup">ගන්න තැන (කොහෙන්ද?)</label>
+        <input id="pickup" maxlength="120" placeholder="උදා: දැරණියගල නගරය">
+
+        <label for="drop">දාන තැන (කොහෙටද?)</label>
+        <input id="drop" maxlength="120" placeholder="උදා: රුවන්වැල්ල">
+
+        <label for="details" id="detailsLabel">අමතර විස්තර (අවශ්‍ය නම්)</label>
+        <textarea id="details" rows="2" maxlength="300"></textarea>
+
+        <button class="btn" id="submitBtn" type="submit">ඕඩර් කරන්න</button>
+        <div id="formMsg" class="msg err hidden"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>Nexis Geo © දැරණියගල</footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

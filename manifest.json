@@ -1,0 +1,13 @@
+{
+  "name": "Nexis Geo",
+  "short_name": "Nexis Geo",
+  "description": "දැරණියගල ටැක්සි, ත්‍රීවීල් හයර් සහ කූරියර් සේවාව",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f8f5",
+  "theme_color": "#0f8a5f",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f8a5f">
+  <meta name="robots" content="noindex">
+  <title>Nexis Geo - රියදුරු</title>
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nexis Geo රියදුරු</h1>
+    <p id="who">ඇතුල් වෙන්න</p>
+  </header>
+
+  <main>
+    <section id="loginCard" class="card">
+      <h2>රියදුරු ලොගින් එක</h2>
+      <label for="dPhone">දුරකථන අංකය</label>
+      <input id="dPhone" type="tel" inputmode="numeric" maxlength="10" placeholder="0771234567">
+      <label for="dPin">PIN අංකය</label>
+      <input id="dPin" type="password" inputmode="numeric" maxlength="8">
+      <button class="btn" id="loginBtn" type="button">ඇතුල් වෙන්න</button>
+      <div id="loginMsg" class="msg err hidden"></div>
+    </section>
+
+    <section id="ordersWrap" class="hidden">
+      <button class="btn secondary" id="refreshBtn" type="button">🔄 අලුත් කරන්න</button>
+      <button class="btn secondary" id="logoutBtn" type="button">ඉවත් වෙන්න</button>
+      <div id="dMsg" class="msg err hidden"></div>
+      <h2 style="margin:16px 4px 8px">ඕඩර්</h2>
+      <div id="ordersList"></div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="driver.js"></script>
+</body>
+</html>
